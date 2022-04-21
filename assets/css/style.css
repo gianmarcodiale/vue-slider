@@ -15,19 +15,8 @@ img {
     justify-content: center;
 }
 
-.container>img {
-    width: 1000px;
-    position: relative
-}
-
 .slider {
     width: calc(100% / 5);
     display: flex;
-    flex-direction: column;
-}
-
-.details {
-    position: absolute;
-    bottom: 2rem;
-    right: 1rem;
+    flex-wrap: wrap;
 }

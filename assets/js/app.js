@@ -5,7 +5,7 @@ const app = new Vue(
             activeImage: 0,
             views: [
                 {
-                    image: '.assets/img/01.jpg',
+                    image: './assets/img/01.jpg',
                     title: 'Svezia',
                     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
                 },
@@ -30,6 +30,16 @@ const app = new Vue(
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
             ]
+        },
+        methods: {
+            prevImg() {
+                // console.log('Ciao');
+                
+                
+            },
+            nextImg() {
+                
+            }
         }
     }
 )

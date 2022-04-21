@@ -10,14 +10,21 @@
 <body>
     <div id="app">
         <div class="container">
-                <img src="./assets/img/01.jpg" alt="">
+                <div class="main-image">
+                    <img :src="views[activeImage].image" alt="">
+                    <div class="details">
+                        <h3>{{views[activeImage].title}}</h3>
+                        <p>{{views[activeImage].text}}</p>
+                    </div>
+                </div>
             <div class="slider">
-                <img src="./assets/img/01.jpg" alt="">
-                <img src="./assets/img/02.jpg" alt="">
-                <img src="./assets/img/03.jpg" alt="">
-                <img src="./assets/img/04.jpg" alt="">
-                <img src="./assets/img/05.jpg" alt="">
+                <img :src="views[index].image" alt="" v-for="(image, index) in views">
+                <div class="navigator">
+                    <div class="prev-img" @click="prevImg">Prev</div>
+                    <div class="next-img" @click="nextImg">Next</div>
+                </div>
             </div>
+
         </div>
     </div>
 
