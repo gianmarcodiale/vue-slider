@@ -6,22 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue Slider</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer'/>
 </head>
 <body>
     <div id="app">
         <div class="container">
-                <div class="main-image">
-                    <img :src="views[activeImage].image" alt="">
-                    <div class="details">
-                        <h3>{{views[activeImage].title}}</h3>
-                        <p>{{views[activeImage].text}}</p>
-                    </div>
+            <div class="main-image">
+                <img :src="views[activeImage].image" alt="">
+                <div class="details">
+                    <h3>{{views[activeImage].title}}</h3>
+                    <p>{{views[activeImage].text}}</p>
                 </div>
+            </div>
             <div class="slider">
-                <img :src="views[index].image" alt="" v-for="(image, index) in views">
+                <img :src="views[index].image" alt="" v-for="(image, index) in views" :class="activeImage === index ? 'active' : ''" >
                 <div class="navigator">
-                    <div class="prev-img" @click="prevImg">Prev</div>
-                    <div class="next-img" @click="nextImg">Next</div>
+                    <div class="prev-img" @click="prevImg">
+                        <i class="fa-solid fa-arrow-up fa-2x"></i>
+                    </div>
+                    <div class="next-img" @click="nextImg">
+                        <i class="fa-solid fa-arrow-down fa-2x"></i>
+                    </div>
                 </div>
             </div>
 
