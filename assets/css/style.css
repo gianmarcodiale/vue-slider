@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container>img {
+    width: 1000px;
+    position: relative
+}
+
+.slider {
+    width: calc(100% / 5);
+    display: flex;
+    flex-direction: column;
+}
+
+.details {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+}
