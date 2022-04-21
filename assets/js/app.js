@@ -34,11 +34,18 @@ const app = new Vue(
         methods: {
             prevImg() {
                 // console.log('Ciao');
-                
-                
+                if (this.activeImage === 0) {
+                    this.activeImage = this.views.length - 1;
+                } else {
+                    this.activeImage -= 1;
+                }
             },
             nextImg() {
-                
+                if (this.activeImage === this.views.length - 1) {
+                    this.activeImage = 0;
+                } else {
+                    this.activeImage += 1;
+                }
             }
         }
     }
