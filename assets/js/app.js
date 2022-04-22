@@ -51,6 +51,10 @@ const app = new Vue(
                 // console.log(index, 'ciao');
                 this.activeImage = index;
             }
+        },
+        mounted() {
+            // console.log('mounted');
+            setInterval(this.nextImg, 3000)
         }
     }
 )
