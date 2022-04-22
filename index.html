@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="slider">
-                <img :src="views[index].image" alt="" v-for="(image, index) in views" :class="activeImage === index ? 'active' : ''" >
+                <img :src="element.image" alt="" v-for="(element, index) in views" :class="activeImage === index ? 'active' : ''" @click="changeImage(index)">
                 <div class="navigator">
                     <div class="prev-img" @click="prevImg">
                         <i class="fa-solid fa-arrow-up fa-2x"></i>

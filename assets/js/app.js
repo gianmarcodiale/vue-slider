@@ -46,6 +46,10 @@ const app = new Vue(
                 } else {
                     this.activeImage += 1;
                 }
+            },
+            changeImage(index) {
+                // console.log(index, 'ciao');
+                this.activeImage = index;
             }
         }
     }
