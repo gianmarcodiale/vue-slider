@@ -12,7 +12,7 @@
     <div id="app">
         <div class="container">
             <div class="main-image">
-                <img :src="views[activeImage].image" alt="" @mouseover="pauseSlider" @mouseout="restartSlider">
+                <img :src="views[activeImage].image" alt="" @mouseover="pauseSlider" @mouseleave="restartSlider">
                 <div class="details">
                     <h3>{{views[activeImage].title}}</h3>
                     <p>{{views[activeImage].text}}</p>
